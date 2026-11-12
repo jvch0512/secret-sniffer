@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secret-sniffer"
+version = "0.1.0"
+description = "Secret scanner with provider patterns, entropy detection, staged-change scanning, baselines and always-redacted output"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+secret-sniffer = "secret_sniffer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
